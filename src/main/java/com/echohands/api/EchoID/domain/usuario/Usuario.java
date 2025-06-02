@@ -1,5 +1,6 @@
 package com.echohands.api.EchoID.domain.usuario;
 
+import com.echohands.api.EchoID.domain.endereco.DadosEndereco;
 import com.echohands.api.EchoID.domain.endereco.Endereco;
 import jakarta.persistence.*;
 
@@ -57,5 +58,17 @@ public class Usuario {
 
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
+    }
+
+    public void setEndereco(DadosEndereco endereco) {
+        this.endereco = new Endereco();
+        this.endereco.setLogradouro(endereco.logradouro());
+        this.endereco.setBairro(endereco.bairro());
+        this.endereco.setCep(endereco.cep());
+        this.endereco.setCidade(endereco.cidade());
+        this.endereco.setUf(endereco.uf());
+        this.endereco.setComplemento(endereco.complemento());
+        this.endereco.setNumero(endereco.numero());
+
     }
 }
