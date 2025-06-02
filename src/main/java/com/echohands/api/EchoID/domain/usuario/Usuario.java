@@ -1,13 +1,19 @@
 package com.echohands.api.EchoID.domain.usuario;
 
 import com.echohands.api.EchoID.domain.endereco.Endereco;
+import jakarta.persistence.*;
 
+@Entity
 public class Usuario {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private String email;
     private String telefone;
 
+    @Embedded
     private Endereco endereco;
 
     public Usuario() {

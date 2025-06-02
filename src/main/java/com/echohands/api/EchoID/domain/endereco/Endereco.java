@@ -1,5 +1,8 @@
 package com.echohands.api.EchoID.domain.endereco;
 
+import jakarta.persistence.Embeddable;
+
+@Embeddable
 public class Endereco {
     private String logradouro;
     private String bairro;
