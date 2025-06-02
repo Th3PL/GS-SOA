@@ -36,4 +36,11 @@ public class UsuarioController {
         );
     }
 
+    @GetMapping("{id}")
+    public ResponseEntity<UsuarioResponse> findById(@PathVariable Long id){
+        return service.findById(id).map(usuario -> {
+            return new UsuarioResponse().toDto(usuario);
+        }).map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
 }
