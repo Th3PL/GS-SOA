@@ -5,10 +5,10 @@ import com.echohands.api.EchoID.domain.usuario.UsuarioResquestCreate;
 import com.echohands.api.EchoID.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/usuarios")
@@ -20,6 +20,20 @@ public class UsuarioController {
     @PostMapping
     public ResponseEntity<UsuarioResponse> create(@RequestBody UsuarioResquestCreate dto){
         return ResponseEntity.status(201).body(new UsuarioResponse().toDto(service.save(dto)));
+    }
+
+    @GetMapping
+    public ResponseEntity<List<UsuarioResponse>> findAll(){
+        return ResponseEntity.ok(
+                service
+                        .findAll()
+                        .stream()
+                        .map(usuario -> {
+                            return new UsuarioResponse().toDto(usuario);
+                        })
+                        .collect(Collectors.toList())
+
+        );
     }
 
 }

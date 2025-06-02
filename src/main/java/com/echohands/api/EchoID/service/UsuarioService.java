@@ -6,6 +6,8 @@ import com.echohands.api.EchoID.domain.usuario.UsuarioResquestCreate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UsuarioService {
 
@@ -19,5 +21,9 @@ public class UsuarioService {
         usuario.setTelefone(dto.telefone());
         usuario.setEndereco(dto.endereco());
         return repository.save(usuario);
+    }
+
+    public List<Usuario> findAll() {
+        return repository.findAll();
     }
 }
