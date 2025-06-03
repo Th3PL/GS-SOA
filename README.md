@@ -10,6 +10,26 @@ O **EchoID** é uma API RESTful desenvolvida para gerenciar o cadastro de usuár
 
 Essa API permite criar, consultar, atualizar e deletar usuários, além de enviar um email de boas-vindas automaticamente no momento do cadastro.
 
+## 🗺️ Arquitetura
+### 📦 Diagrama de Classes
+
+O diagrama de classes abaixo representa a estrutura das principais entidades, DTOs, serviços, controladores e repositórios que compõem o projeto, incluindo os relacionamentos e responsabilidades de cada classe.
+
+![Diagrama de Classes](./img/diagrama-de-classe.png)
+
+### 🔄 Diagrama de Sequência - API
+
+O diagrama de sequência demonstra o fluxo de interações e retornos entre o cliente (frontend ou consumidor da API) e a API. Cada requisição HTTP está detalhada, incluindo os caminhos de sucesso e erro.
+
+![Diagrama de Sequência](./img/diagrama-de-sequencia.png)
+
+> 📜 **Cenários contemplados:**
+- ✅ Criação de usuário (`POST /usuarios`)
+- ✅ Listagem de usuários (`GET /usuarios`)
+- ✅ Consulta por ID (`GET /usuarios/{id}`)
+- ✅ Atualização de usuário (`PUT /usuarios/{id}`)
+- ✅ Remoção de usuário (`DELETE /usuarios/{id}`)
+
 ## 🧰  Tecnologias Utilizadas
 
 - Java 17+
