@@ -30,6 +30,12 @@ O diagrama de sequência demonstra o fluxo de interações e retornos entre o cl
 - ✅ Atualização de usuário (`PUT /usuarios/{id}`)
 - ✅ Remoção de usuário (`DELETE /usuarios/{id}`)
 
+## ▶️ Rodar o projeto
+Para rodar o projeto basta utilizar o comando abaixo no termial
+```bash
+mvn spring-boot:run
+```
+
 ## 🧰  Tecnologias Utilizadas
 
 - Java 17+
