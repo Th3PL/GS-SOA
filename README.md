@@ -77,9 +77,12 @@ Essa organização ajuda a manter o código limpo, modular e de fácil escalabil
 ## ✨ Créditos
 
 Desenvolvido por:
-- ⚡ João Pedro Borsato Cruz – RM550294
-- 💫 Maria Fernanda Vieira de Camargo – RM97956
-- 🚀 Pedro Lucas de Andrade Nunes – RM550366
+
+  | Nome          | RM       |
+|----------------|----------|
+| ⚡ João Pedro Borsato Cruz | RM550294  |
+| 💫 Maria Fernanda Vieira de Camargo | RM97956  |
+| 🚀 Pedro Lucas de Andrade Nunes | RM550366  |
 
 ## 🚩 Referências
 
